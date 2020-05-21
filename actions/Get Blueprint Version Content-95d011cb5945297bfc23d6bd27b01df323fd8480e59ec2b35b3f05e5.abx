@@ -1,0 +1,13 @@
+---
+exportVersion: "1"
+exportId: "8a5ea9ae71c2b1880171f4b61f4b2432"
+name: "Get Blueprint Version Content"
+runtime: "python"
+entrypoint: "handler"
+description: "Get the content from a versioned blueprint"
+timeoutSeconds: 180
+deploymentTimeoutSeconds: 600
+dependencies: "requests"
+actionType: "SCRIPT"
+provider: "aws"
+memoryInMB: 300

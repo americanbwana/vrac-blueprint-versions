@@ -1,0 +1,9 @@
+---
+exportVersion: "1"
+exportId: "8a5ee9f9714a1fdb0171f4c91b992421"
+name: "Push new blueprint version to github - Flow"
+description: "Flow to get the content of a versioned blueprint.  Will get the bearer_token\
+  \ using another action"
+timeoutSeconds: 600
+actionType: "FLOW"
+memoryInMB: 300

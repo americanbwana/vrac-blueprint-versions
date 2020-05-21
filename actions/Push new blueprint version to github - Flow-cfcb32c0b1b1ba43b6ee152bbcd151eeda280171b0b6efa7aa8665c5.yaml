@@ -1,0 +1,15 @@
+---
+version: 1
+flow:
+  flow_start:
+    next: action1
+  action1:
+    action: get_bearer_token_AWS
+    next: action2
+  action2:
+    action: Get Blueprint Version Content
+    next: action3
+  action3:
+    action: Add or update Blueprint on Github
+    next: flow_end
+

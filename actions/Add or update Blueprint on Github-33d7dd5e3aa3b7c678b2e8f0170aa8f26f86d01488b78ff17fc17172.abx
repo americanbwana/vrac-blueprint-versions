@@ -1,0 +1,21 @@
+---
+exportVersion: "1"
+exportId: "8a5ee9f9714a1fdb0171f558eac92b02"
+name: "Add or update Blueprint on Github"
+runtime: "python"
+entrypoint: "handler"
+description: "Action that copies the new version content into a file then pushes it\
+  \ up to Github.  The name and version are automatically updated to match the new\
+  \ version information. "
+inputs:
+  githubRepo: "americanbwana/vrac-blueprint-versions"
+  githubToken: "GITHUB_TOKEN"
+  region_name: "us-east-2"
+timeoutSeconds: 180
+deploymentTimeoutSeconds: 600
+dependencies: "pyyaml\npygithub\nboto3"
+actionType: "SCRIPT"
+provider: "aws"
+configuration:
+  const_aws-iam_role: "blog-ssm-sample-role"
+memoryInMB: 300

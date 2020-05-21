@@ -1,0 +1,18 @@
+---
+exportVersion: "1"
+exportId: "8a5e0b1d71c2b48c0171eaf174312e48"
+name: "get_bearer_token_AWS"
+runtime: "python"
+entrypoint: "handler"
+description: "Get refresh token from SSM Parameters then return the bearer token."
+inputs:
+  region_name: "us-east-2"
+  refreshToken: "VRAC_REFRESH_TOKEN"
+timeoutSeconds: 180
+deploymentTimeoutSeconds: 600
+dependencies: "requests\nboto3"
+actionType: "SCRIPT"
+provider: "aws"
+configuration:
+  const_aws-iam_role: "blog-ssm-sample-role"
+memoryInMB: 300
